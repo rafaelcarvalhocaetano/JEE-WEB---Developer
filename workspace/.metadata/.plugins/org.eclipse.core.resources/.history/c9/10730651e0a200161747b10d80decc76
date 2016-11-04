@@ -1,0 +1,11 @@
+package dao;
+
+import domain.Fabricante;
+
+public class FabricanteDAO {
+	
+	public void salvar(Fabricante){
+		
+	}
+
+}
