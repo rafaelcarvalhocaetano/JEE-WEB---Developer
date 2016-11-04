@@ -38,7 +38,7 @@ public class FabricanteDAO {
 				fdao.salvar(f2);
 				System.out.println("Salvo com sucesso");
 			} catch (SQLException e) {
-				System.out.println("Não salvo....");
+				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			

@@ -33,15 +33,8 @@ public class FabricanteDAO {
 		
 		FabricanteDAO fdao = new FabricanteDAO();
 		
-			try {
-				fdao.salvar(f1);
-				fdao.salvar(f2);
-				System.out.println("Salvo com sucesso");
-			} catch (SQLException e) {
-				System.out.println("Não salvo....");
-				e.printStackTrace();
-			}
-			
+			fdao.salvar(f1);
+			fdao.salvar(f2);
 			
 		
 		
