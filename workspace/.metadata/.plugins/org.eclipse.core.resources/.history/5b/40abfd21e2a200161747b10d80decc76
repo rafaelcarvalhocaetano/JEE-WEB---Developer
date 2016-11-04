@@ -22,7 +22,7 @@ public class FabricanteDAO {
 		
 		comando.setString(1, f.getDescricao());
 		
-		comando.executeUpdate();
+		
 	
 	}
 

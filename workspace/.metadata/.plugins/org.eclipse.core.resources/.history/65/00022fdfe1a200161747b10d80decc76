@@ -19,10 +19,6 @@ public class FabricanteDAO {
 		Connection conexao = ConexaoFactory.conectar();
 		
 		PreparedStatement comando = conexao.prepareStatement(sql.toString());
-		
-		comando.setString(1, f.getDescricao());
-		
-		comando.executeUpdate();
 	
 	}
 

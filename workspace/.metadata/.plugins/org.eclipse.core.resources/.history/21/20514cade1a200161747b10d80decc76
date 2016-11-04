@@ -1,7 +1,6 @@
 package dao;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 import domain.Fabricante;
@@ -17,12 +16,6 @@ public class FabricanteDAO {
 		sql.append("VALUE (?) ");
 		
 		Connection conexao = ConexaoFactory.conectar();
-		
-		PreparedStatement comando = conexao.prepareStatement(sql.toString());
-		
-		comando.setString(1, f.getDescricao());
-		
-		comando.executeUpdate();
 	
 	}
 

@@ -21,8 +21,6 @@ public class FabricanteDAO {
 		PreparedStatement comando = conexao.prepareStatement(sql.toString());
 		
 		comando.setString(1, f.getDescricao());
-		
-		comando.executeUpdate();
 	
 	}
 
