@@ -32,10 +32,13 @@ public class FabricanteDAO {
 		f2.setDescricao("DESCRICAO 2");
 		
 		FabricanteDAO fdao = new FabricanteDAO();
-		
+		try {
 			fdao.salvar(f1);
-			
-		
+			System.out.println("Ok........");
+		} catch (SQLException e) {
+			e.printStackTrace();
+			System.out.println("Erro......");
+		}
 		
 		
 	}

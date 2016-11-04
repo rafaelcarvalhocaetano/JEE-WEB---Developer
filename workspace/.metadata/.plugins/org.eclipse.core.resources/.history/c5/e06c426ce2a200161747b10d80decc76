@@ -14,7 +14,7 @@ public class FabricanteDAO {
 		StringBuilder sql = new StringBuilder();
 		sql.append("INSERT INTO fabricante ");
 		sql.append("(descricao) ");
-		sql.append("VALUES (?)");
+		sql.append("VALUE (?) ");
 		
 		Connection conexao = ConexaoFactory.conectar();
 		
@@ -23,21 +23,7 @@ public class FabricanteDAO {
 		comando.setString(1, f.getDescricao());
 		
 		comando.executeUpdate();
-	}
-	public static void main(String[] args) throws SQLException{
-		
-		Fabricante f1 = new Fabricante();
-		f1.setDescricao("DESCRICAO 1");
-		Fabricante f2 = new Fabricante();
-		f2.setDescricao("DESCRICAO 2");
-		
-		FabricanteDAO fdao = new FabricanteDAO();
-		
-			fdao.salvar(f1);
-			
-		
-		
-		
+	
 	}
 
 }
