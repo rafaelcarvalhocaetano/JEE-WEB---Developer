@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;css, js&apos; to &apos;resources&apos;" description="Move 2 resources to &apos;resources&apos;" destination="WebContent/resources" element1="WebContent/templates/css" element2="WebContent/templates/js" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="2" stamp="1478296551704" updateReferences="true"/>
+</session>

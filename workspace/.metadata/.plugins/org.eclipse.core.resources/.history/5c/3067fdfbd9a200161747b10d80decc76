@@ -1,0 +1,11 @@
+package domain;
+
+public class Fabricante {
+	
+	private Long codigo;
+	private String descricao;
+	
+	
+	
+
+}

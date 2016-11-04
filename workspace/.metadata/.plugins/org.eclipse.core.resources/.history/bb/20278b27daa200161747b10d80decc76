@@ -1,0 +1,13 @@
+package domain;
+
+public class Produto {
+	
+	private Long codigo;
+	private String descricao;
+	private
+	private
+	private
+	private
+	private
+
+}

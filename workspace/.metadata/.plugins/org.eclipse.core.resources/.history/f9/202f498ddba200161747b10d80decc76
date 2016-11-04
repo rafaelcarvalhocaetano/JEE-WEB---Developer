@@ -1,0 +1,9 @@
+package factory;
+
+public class ConexaoFactory {
+	
+	
+	private static final String USUARIO = "root";
+	private static final String SENHA = "q1w2e3r4";
+
+}
