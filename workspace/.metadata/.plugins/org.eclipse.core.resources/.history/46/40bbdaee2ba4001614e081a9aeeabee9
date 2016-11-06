@@ -96,8 +96,8 @@ public class FabricanteDAO {
 
 	 	*/
 		Fabricante f1 = new Fabricante();
-		f1.setCodigo(5L);
-		f1.setDescricao("DESCRICAO 3");
+		f1.setCodigo(4L);
+		f1.setDescricao("DESCRICAO 2");
 		
 		
 		FabricanteDAO fdao = new FabricanteDAO();

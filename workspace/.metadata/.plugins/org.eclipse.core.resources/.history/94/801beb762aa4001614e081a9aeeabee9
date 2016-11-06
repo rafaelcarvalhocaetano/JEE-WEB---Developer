@@ -41,15 +41,13 @@ public class FabricanteDAO {
 	public void editar(Fabricante f) throws SQLException{
 		StringBuilder sql = new StringBuilder();
 		sql.append("UPDATE fabricante ");
-		sql.append("SET descricao = ? ");
-		sql.append("WHERE codigo = ? ");
+		sql.append(" ");
 		
 		Connection conexao = ConexaoFactory.conectar();
 		
 		PreparedStatement comando = conexao.prepareStatement(sql.toString());
 		
-		comando.setString(1, f.getDescricao());
-		comando.setLong(2, f.getCodigo());
+		comando.setLong(1, f.getCodigo());
 		
 		comando.executeUpdate();
 				
@@ -60,7 +58,7 @@ public class FabricanteDAO {
 	
 	public static void main(String[] args) {
 		
-	/*
+		/*
 		Fabricante f1 = new Fabricante();
 		f1.setDescricao("DESCRICAO 1");
 		Fabricante f2 = new Fabricante();
@@ -76,7 +74,8 @@ public class FabricanteDAO {
 				System.out.println("Não salvo....");
 				e.printStackTrace();
 			}
-			
+			*/
+		
 		Fabricante f1 = new Fabricante();
 		f1.setCodigo(2L);
 		
@@ -93,22 +92,7 @@ public class FabricanteDAO {
 			e.printStackTrace();
 			System.out.println("Erro.....");
 		}
-
-	 	*/
-		Fabricante f1 = new Fabricante();
-		f1.setCodigo(5L);
-		f1.setDescricao("DESCRICAO 3");
 		
-		
-		FabricanteDAO fdao = new FabricanteDAO();
-		try {
-			fdao.editar(f1);
-			System.out.println("SUCESSO...");
-		} catch (SQLException e) {
-			System.out.println("Sem Conexão....");
-			e.printStackTrace();
-			
-		}
 	}
 
 }

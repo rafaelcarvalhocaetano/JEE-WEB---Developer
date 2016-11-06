@@ -96,14 +96,12 @@ public class FabricanteDAO {
 
 	 	*/
 		Fabricante f1 = new Fabricante();
-		f1.setCodigo(5L);
 		f1.setDescricao("DESCRICAO 3");
-		
 		
 		FabricanteDAO fdao = new FabricanteDAO();
 		try {
 			fdao.editar(f1);
-			System.out.println("SUCESSO...");
+			System.out.println("aaaaaaaa....SUCESSO...");
 		} catch (SQLException e) {
 			System.out.println("Sem Conexão....");
 			e.printStackTrace();
