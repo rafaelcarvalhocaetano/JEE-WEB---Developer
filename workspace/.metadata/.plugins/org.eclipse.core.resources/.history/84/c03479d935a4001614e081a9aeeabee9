@@ -199,26 +199,8 @@ public class FabricanteDAO {
 		 * catch (SQLException e) { System.out.println("ERRO...");
 		 * e.printStackTrace(); }
 		 */
-
+		
 		Fabricante f1 = new Fabricante();
-
-		f1.setDescricao("2");
-
-		FabricanteDAO fdao = new FabricanteDAO();
-
-		ArrayList<Fabricante> lista;
-		try {
-			lista = fdao.buscarPorDescricao(f1);
-
-			for (Fabricante f : lista) {
-				System.out.println("Resultado: " + f);
-			}
-
-			System.out.println("OK...");
-		} catch (SQLException e) {
-			System.out.println("Erro...");
-			e.printStackTrace();
-		}
-
+		
 	}
 }

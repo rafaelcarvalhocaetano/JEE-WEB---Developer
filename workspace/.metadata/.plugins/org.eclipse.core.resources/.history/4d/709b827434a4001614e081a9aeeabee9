@@ -111,35 +111,6 @@ public class FabricanteDAO {
 		}
 
 		return lista;
-	}
-
-	public ArrayList<Fabricante> buscarPorDescricao(Fabricante f) throws SQLException {
-
-		StringBuilder sql = new StringBuilder();
-		sql.append("SELECT codigo, descricao ");
-		sql.append("FROM fabricante ");
-		sql.append("WHERE descricao LIKE ? ");
-		sql.append("ORDER BY descricao ASC ");
-
-		Connection conexao = ConexaoFactory.conectar();
-
-		PreparedStatement comando = conexao.prepareStatement(sql.toString());
-		comando.setString(1, "%" + f.getDescricao() + "%");
-
-		ResultSet resultado = comando.executeQuery();
-
-		ArrayList<Fabricante> lista = new ArrayList<Fabricante>();
-
-		while (resultado.next()) {
-
-			Fabricante item = new Fabricante();
-			item.setCodigo(resultado.getLong("codigo"));
-			item.setDescricao(resultado.getString("descricao"));
-
-			lista.add(item);
-		}
-
-		return lista;
 
 	}
 
@@ -190,35 +161,19 @@ public class FabricanteDAO {
 		 * } catch (SQLException e) {
 		 * 
 		 * System.out.println("Erro...."); e.printStackTrace(); }
-		 * 
-		 * 
-		 * FabricanteDAO fdao = new FabricanteDAO();
-		 * 
-		 * try { ArrayList<Fabricante> lista = fdao.listar(); for (Fabricante f
-		 * : lista) { System.out.println(f); } System.out.println("Ok...."); }
-		 * catch (SQLException e) { System.out.println("ERRO...");
-		 * e.printStackTrace(); }
 		 */
-
-		Fabricante f1 = new Fabricante();
-
-		f1.setDescricao("2");
-
+		
 		FabricanteDAO fdao = new FabricanteDAO();
-
-		ArrayList<Fabricante> lista;
+		
 		try {
-			lista = fdao.buscarPorDescricao(f1);
-
-			for (Fabricante f : lista) {
-				System.out.println("Resultado: " + f);
+			ArrayList<Fabricante> lista = fdao.listar();
+			for(Fabricante f : lista){
+				System.out.println(f);
 			}
-
-			System.out.println("OK...");
+			System.out.println("Ok....");
 		} catch (SQLException e) {
-			System.out.println("Erro...");
+			System.out.println("ERRO...");
 			e.printStackTrace();
 		}
-
 	}
 }
