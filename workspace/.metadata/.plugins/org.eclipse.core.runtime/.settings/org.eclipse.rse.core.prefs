@@ -1,3 +1,4 @@
 activeuserprofiles=Developer-PC;Team
 eclipse.preferences.version=1
 org.eclipse.rse.systemtype.local.systemType.defaultUserId=Developer
+useridperkey=Developer-PC.Local\=Developer;
