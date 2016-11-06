@@ -84,35 +84,18 @@ public class FabricanteDAO {
 		return retorno;
 
 	}
-
-	public ArrayList<Fabricante> listar() throws SQLException {
-
+	
+	public ArrayList<Fabricante> listar() throws SQLException{
+		
 		StringBuilder sql = new StringBuilder();
 		sql.append("SELECT codigo, descricao ");
 		sql.append("FROM fabricante ");
 		sql.append("ORDER BY descricao ASC ");
-
-		Connection conexao = ConexaoFactory.conectar();
-
-		PreparedStatement comando = conexao.prepareStatement(sql.toString());
-
-		ResultSet resultado = comando.executeQuery();
-
-		ArrayList<Fabricante> lista = new ArrayList<Fabricante>();
-
-		while (resultado.next()) {
-
-			Fabricante f = new Fabricante();
-
-			f.setCodigo(resultado.getLong("codigo"));
-			f.setDescricao(resultado.getString("descricao"));
-
-			lista.add(f);
-		}
-
-		return lista;
-
+		
+		
+		
 	}
+	
 
 	public static void main(String[] args) {
 
@@ -145,34 +128,26 @@ public class FabricanteDAO {
 		 * System.out.println("Sem Conexão...."); e.printStackTrace();
 		 * 
 		 * }
-		 * 
-		 * Fabricante f1 = new Fabricante(); f1.setCodigo(1L);
-		 * 
-		 * Fabricante f2 = new Fabricante(); f2.setCodigo(4L);
-		 * 
-		 * FabricanteDAO fdao = new FabricanteDAO();
-		 * 
-		 * try { Fabricante f3 = fdao.buscarPorCodigo(f1); Fabricante f4 =
-		 * fdao.buscarPorCodigo(f2);
-		 * 
-		 * System.out.println("Resultado 1: " + f3);
-		 * System.out.println("Resultado 2: " + f4);
-		 * 
-		 * } catch (SQLException e) {
-		 * 
-		 * System.out.println("Erro...."); e.printStackTrace(); }
 		 */
-		
+
+		Fabricante f1 = new Fabricante();
+		f1.setCodigo(1L);
+
+		Fabricante f2 = new Fabricante();
+		f2.setCodigo(4L);
+
 		FabricanteDAO fdao = new FabricanteDAO();
-		
+
 		try {
-			ArrayList<Fabricante> lista = fdao.listar();
-			for(Fabricante f : lista){
-				System.out.println(f);
-			}
-			System.out.println("Ok....");
+			Fabricante f3 = fdao.buscarPorCodigo(f1);
+			Fabricante f4 = fdao.buscarPorCodigo(f2);
+
+			System.out.println("Resultado 1: " + f3);
+			System.out.println("Resultado 2: " + f4);
+
 		} catch (SQLException e) {
-			System.out.println("ERRO...");
+
+			System.out.println("Erro....");
 			e.printStackTrace();
 		}
 	}

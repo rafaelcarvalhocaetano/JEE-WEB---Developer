@@ -167,12 +167,8 @@ public class FabricanteDAO {
 		
 		try {
 			ArrayList<Fabricante> lista = fdao.listar();
-			for(Fabricante f : lista){
-				System.out.println(f);
-			}
-			System.out.println("Ok....");
 		} catch (SQLException e) {
-			System.out.println("ERRO...");
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
