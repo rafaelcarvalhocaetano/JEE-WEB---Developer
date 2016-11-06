@@ -42,7 +42,7 @@ public class FabricanteDAO {
 	
 	
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws SQLException {
 		
 		/*
 		Fabricante f1 = new Fabricante();
@@ -69,16 +69,8 @@ public class FabricanteDAO {
 		f2.setCodigo(3L);
 		
 		FabricanteDAO fdao = new FabricanteDAO();
-		try {
-			fdao.excluir(f1);
-			fdao.excluir(f2);
-			System.out.println("Sucesso....");
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			System.out.println("Erro.....");
-		}
-		
+		fdao.excluir(f1);
+		fdao.excluir(f2);
 	}
 
 }

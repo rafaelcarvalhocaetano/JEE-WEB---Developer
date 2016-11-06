@@ -25,18 +25,12 @@ public class FabricanteDAO {
 		comando.executeUpdate();
 	}
 	
-	public void excluir(Fabricante f)throws SQLException{
+	public void excluir(Fabricante f){
 		StringBuilder sql = new StringBuilder();
 		sql.append("DELETE FROM fabricante ");
 		sql.append("WHERE codigo = ? ");
 		
 		Connection conexao = ConexaoFactory.conectar();
-		
-		PreparedStatement comando = conexao.prepareStatement(sql.toString());
-		
-		comando.setLong(1, f.getCodigo());
-		
-		comando.executeUpdate();
 	}
 	
 	
@@ -44,7 +38,6 @@ public class FabricanteDAO {
 	
 	public static void main(String[] args) {
 		
-		/*
 		Fabricante f1 = new Fabricante();
 		f1.setDescricao("DESCRICAO 1");
 		Fabricante f2 = new Fabricante();
@@ -60,25 +53,6 @@ public class FabricanteDAO {
 				System.out.println("Não salvo....");
 				e.printStackTrace();
 			}
-			*/
-		
-		Fabricante f1 = new Fabricante();
-		f1.setCodigo(2L);
-		
-		Fabricante f2 = new Fabricante();
-		f2.setCodigo(3L);
-		
-		FabricanteDAO fdao = new FabricanteDAO();
-		try {
-			fdao.excluir(f1);
-			fdao.excluir(f2);
-			System.out.println("Sucesso....");
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			System.out.println("Erro.....");
-		}
-		
 	}
 
 }
