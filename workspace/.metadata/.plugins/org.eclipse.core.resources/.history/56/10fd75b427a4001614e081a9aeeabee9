@@ -24,16 +24,6 @@ public class FabricanteDAO {
 		
 		comando.executeUpdate();
 	}
-	
-	public void excluir(Fabricante f){
-		StringBuilder sql = new StringBuilder();
-		sql.append("DELETE FROM fabricante ");
-		sql.append("WHERE codigo = ? ");
-	}
-	
-	
-	
-	
 	public static void main(String[] args) {
 		
 		Fabricante f1 = new Fabricante();

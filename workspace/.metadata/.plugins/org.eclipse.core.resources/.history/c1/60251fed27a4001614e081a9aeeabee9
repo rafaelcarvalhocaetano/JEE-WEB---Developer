@@ -28,7 +28,7 @@ public class FabricanteDAO {
 	public void excluir(Fabricante f){
 		StringBuilder sql = new StringBuilder();
 		sql.append("DELETE FROM fabricante ");
-		sql.append("WHERE codigo = ? ");
+		sql.append("WHERE  ")
 	}
 	
 	
