@@ -18,7 +18,16 @@ public class Fabricante {
 		this.descricao = descricao;
 	}
 	
-	
+	@Override
+	public String toString() {
+		
+		String saida = codigo + " - "+ descricao;
+		
+		return saida; 
+				
+				
+				
+	}
 	
 
 }
