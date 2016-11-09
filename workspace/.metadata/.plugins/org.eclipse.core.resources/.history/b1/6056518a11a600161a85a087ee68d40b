@@ -16,8 +16,9 @@
 		<p:layoutUnit position="north">
 			<ui:insert name="menu" />
 		</p:layoutUnit>
+aaaaaaaaaaaaaaa
 		<p:layoutUnit position="center">
-	
+		aaaaaa
 			<ui:insert name="conteudo" />
 		</p:layoutUnit>
 	</p:layout>

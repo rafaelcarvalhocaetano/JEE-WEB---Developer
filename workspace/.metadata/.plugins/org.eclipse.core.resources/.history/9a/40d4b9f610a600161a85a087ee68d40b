@@ -12,14 +12,19 @@
 </h:head>
 <h:body>
 
-	<p:layout>
+	<p:layout fullPage="true">
+		
 		<p:layoutUnit position="north">
-			<ui:insert name="menu" />
+			<p:layoutUnit>
+				<p:layoutUnit position="center">
+				<ui:insert>
+				
+				</ui:insert>
+				</p:layoutUnit>
+			</p:layoutUnit>
 		</p:layoutUnit>
-		<p:layoutUnit position="center">
 	
-			<ui:insert name="conteudo" />
-		</p:layoutUnit>
 	</p:layout>
+	
 </h:body>
 </html>

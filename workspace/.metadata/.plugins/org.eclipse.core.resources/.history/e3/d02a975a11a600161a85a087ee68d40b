@@ -13,13 +13,25 @@
 <h:body>
 
 	<p:layout>
-		<p:layoutUnit position="north">
-			<ui:insert name="menu" />
-		</p:layoutUnit>
-		<p:layoutUnit position="center">
 	
-			<ui:insert name="conteudo" />
-		</p:layoutUnit>
+	
+	<p:layoutUnit position="north">
+	<ui:insert name="menu" />
+	</p:layoutUnit>
+	
+	
+	<p:layoutUnit position="center">
+	<ui:insert name="conteudo" />
+	</p:layoutUnit>
+	
+	
+	
+	
+	
+	
+	
+	
 	</p:layout>
+	
 </h:body>
 </html>
