@@ -11,15 +11,8 @@
 </h:head>
 <h:body>
 
-	<p:layout fullPage="true">
-		<p:layoutUnit position="north">
-			<p:layoutUnit>
-				<p:layoutUnit position="center">
-				
-				
-				</p:layoutUnit>
-			</p:layoutUnit>
-		</p:layoutUnit>
-	</p:layout>
+<p:layout fullPage="true">
+
+</p:layout>
 </h:body>
 </html>
