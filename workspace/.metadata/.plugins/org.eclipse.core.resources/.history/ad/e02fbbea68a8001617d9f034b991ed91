@@ -9,7 +9,7 @@
 <h:head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 	<title>DROGARIA</title>
-	<h:outputStylesheet library=""></h:link>
+	<h:link ></h:link>
 </h:head>
 <h:body>
 	<p:layout fullPage="true">
