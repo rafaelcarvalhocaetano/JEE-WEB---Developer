@@ -21,3 +21,5 @@
 0:0:0:0:0:0:0:1 - - [08/Nov/2016:22:14:45 -0200] "GET /drogaria/templates/modeloSistemas.xhtml HTTP/1.1" 200 762
 0:0:0:0:0:0:0:1 - - [08/Nov/2016:22:14:46 -0200] "GET /drogaria/templates/modeloSistemas.xhtml HTTP/1.1" 304 -
 0:0:0:0:0:0:0:1 - - [08/Nov/2016:22:15:11 -0200] "GET /drogaria/templates/modeloSistemas.xhtml HTTP/1.1" 200 738
+127.0.0.1 - - [08/Nov/2016:22:19:19 -0200] "GET / HTTP/1.1" 404 992
+0:0:0:0:0:0:0:1 - - [08/Nov/2016:22:19:20 -0200] "GET /drogaria/templates/modeloSistemas.xhtml HTTP/1.1" 200 738
