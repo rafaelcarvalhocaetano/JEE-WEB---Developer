@@ -9,17 +9,10 @@
 	  <h:form>
 	  	<p:menubar>
 	  		<p:submenu label="Arquivos">
-	  			<p:menuitem value="Sair"/>
-	  		</p:submenu>
-	  		  			
-	  		<p:submenu label="Cadastros">
-	  			<p:menuitem value="Fabricantes"/>
-	  			<p:menuitem value="Produtos"/>
-	  		</p:submenu>
-	  		
-	  		<p:submenu label="Ajuda">
-	  			<p:menuitem value="Sobre"/>
-	  		</p:submenu>  	
+	  		<p:menuitem />
+	  		</p:submenu>	  			
+	  		<p:submenu label="Cadastros"></p:submenu>
+	  		<p:submenu label="Ajuda"></p:submenu>  	
 	  	</p:menubar>
 	  </h:form>
 	  
