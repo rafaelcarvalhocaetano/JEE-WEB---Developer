@@ -7,10 +7,6 @@
 	  xmlns:f="http://java.sun.com/jsf/core"
 	  template="/templates/modeloSistemas.xhtml">
 	  
-	  <ui:define name="menu">
-	  	<ui:include src="/includes/menuPrincipal.xhtml" />
-	  </ui:define>
-	  
 	  <ui:define name="conteudo"></ui:define>
 
 </ui:composition>
