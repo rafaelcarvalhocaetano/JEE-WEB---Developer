@@ -16,3 +16,20 @@ nov 11, 2016 21:30:55.59 [1111/213055:ERROR:main_dll_loader_win.cc(196)] Could n
 nov 11, 2016 21:31:08.86 [4832:1572:1111/213108:ERROR:angle_platform_impl.cc(33)] ANGLE Display::initialize error 5: DXGI 1.2 required to present to HWNDs owned by another process.
 nov 11, 2016 21:31:08.86 [4832:1572:1111/213108:ERROR:gl_surface_egl.cc(612)] eglInitialize D3D11 failed with error EGL_NOT_INITIALIZED, trying next display type
 nov 11, 2016 21:31:10.23 [1111/213110:ERROR:main_dll_loader_win.cc(196)] Could not find exported function RelaunchChromeBrowserWithNewCommandLineIfNeeded
+nov 11, 2016 21:49:41.05 [1111/214941:ERROR:main_dll_loader_win.cc(196)] Could not find exported function RelaunchChromeBrowserWithNewCommandLineIfNeeded
+
+nov 11, 2016 22:01:20.13 NEW SESSION
+nov 11, 2016 22:01:20.13 [3996:984:1111/220120:ERROR:angle_platform_impl.cc(33)] ANGLE Display::initialize error 5: DXGI 1.2 required to present to HWNDs owned by another process.
+nov 11, 2016 22:01:20.18 [3996:984:1111/220120:ERROR:gl_surface_egl.cc(612)] eglInitialize D3D11 failed with error EGL_NOT_INITIALIZED, trying next display type
+nov 11, 2016 22:01:56.42 [1111/220156:ERROR:main_dll_loader_win.cc(196)] Could not find exported function RelaunchChromeBrowserWithNewCommandLineIfNeeded
+nov 11, 2016 22:12:33.68 [3644:2632:1111/221233:ERROR:angle_platform_impl.cc(33)] ANGLE Display::initialize error 5: DXGI 1.2 required to present to HWNDs owned by another process.
+nov 11, 2016 22:12:33.70 [3644:2632:1111/221233:ERROR:gl_surface_egl.cc(612)] eglInitialize D3D11 failed with error EGL_NOT_INITIALIZED, trying next display type
+nov 11, 2016 22:12:34.25 [1111/221234:ERROR:main_dll_loader_win.cc(196)] Could not find exported function RelaunchChromeBrowserWithNewCommandLineIfNeeded
+nov 11, 2016 22:13:07.37 [1111/221307:ERROR:main_dll_loader_win.cc(196)] Could not find exported function RelaunchChromeBrowserWithNewCommandLineIfNeeded
+nov 11, 2016 22:14:59.44 [2496:3576:1111/221459:ERROR:angle_platform_impl.cc(33)] ANGLE Display::initialize error 5: DXGI 1.2 required to present to HWNDs owned by another process.
+nov 11, 2016 22:14:59.44 [2496:3576:1111/221459:ERROR:gl_surface_egl.cc(612)] eglInitialize D3D11 failed with error EGL_NOT_INITIALIZED, trying next display type
+nov 11, 2016 22:15:00.62 [1111/221500:ERROR:main_dll_loader_win.cc(196)] Could not find exported function RelaunchChromeBrowserWithNewCommandLineIfNeeded
+nov 11, 2016 22:22:51.97 [1111/222251:ERROR:main_dll_loader_win.cc(196)] Could not find exported function RelaunchChromeBrowserWithNewCommandLineIfNeeded
+nov 11, 2016 22:24:22.28 [3868:1496:1111/222422:ERROR:angle_platform_impl.cc(33)] ANGLE Display::initialize error 5: DXGI 1.2 required to present to HWNDs owned by another process.
+nov 11, 2016 22:24:22.28 [3868:1496:1111/222422:ERROR:gl_surface_egl.cc(612)] eglInitialize D3D11 failed with error EGL_NOT_INITIALIZED, trying next display type
+nov 11, 2016 22:24:26.20 [1111/222426:ERROR:main_dll_loader_win.cc(196)] Could not find exported function RelaunchChromeBrowserWithNewCommandLineIfNeeded
