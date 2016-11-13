@@ -104,3 +104,8 @@
 0:0:0:0:0:0:0:1 - - [13/Nov/2016:16:00:32 -0200] "GET /drogaria/faces/pages/principal.xhtml HTTP/1.1" 200 4840
 0:0:0:0:0:0:0:1 - - [13/Nov/2016:16:00:34 -0200] "GET /drogaria/faces/javax.faces.resource/images/ui-bg_glass_75_79c9ec_1x400.png?ln=primefaces-start HTTP/1.1" 200 132
 127.0.0.1 - - [13/Nov/2016:16:00:34 -0200] "GET /drogaria/faces/javax.faces.resource/images/ui-icons_056b93_256x240.png?ln=primefaces-start HTTP/1.1" 200 4369
+127.0.0.1 - - [13/Nov/2016:16:26:26 -0200] "GET / HTTP/1.1" 404 992
+0:0:0:0:0:0:0:1 - - [13/Nov/2016:16:26:26 -0200] "GET /drogaria/pages/fabricante.xhtml HTTP/1.1" 200 624
+0:0:0:0:0:0:0:1 - - [13/Nov/2016:16:26:34 -0200] "GET /drogaria/faces/pages/fabricante.xhtml HTTP/1.1" 200 4841
+0:0:0:0:0:0:0:1 - - [13/Nov/2016:16:26:38 -0200] "POST /drogaria/faces/pages/fabricante.xhtml HTTP/1.1" 200 210
+0:0:0:0:0:0:0:1 - - [13/Nov/2016:16:26:40 -0200] "POST /drogaria/faces/pages/fabricante.xhtml HTTP/1.1" 200 210
