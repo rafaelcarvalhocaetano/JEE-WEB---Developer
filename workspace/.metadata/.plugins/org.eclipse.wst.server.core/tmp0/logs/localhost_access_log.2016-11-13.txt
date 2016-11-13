@@ -1,0 +1,14 @@
+127.0.0.1 - - [13/Nov/2016:15:04:59 -0200] "GET / HTTP/1.1" 404 992
+0:0:0:0:0:0:0:1 - - [13/Nov/2016:15:05:00 -0200] "GET /drogaria/pages/principal.xhtml HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [13/Nov/2016:15:05:00 -0200] "GET /favicon.ico HTTP/1.1" 404 1014
+0:0:0:0:0:0:0:1 - - [13/Nov/2016:15:05:07 -0200] "GET /drogaria/faces/pages/principal.xhtml HTTP/1.1" 200 5218
+0:0:0:0:0:0:0:1 - - [13/Nov/2016:15:05:07 -0200] "GET /drogaria/faces/pages/principal.xhtml HTTP/1.1" 200 5218
+0:0:0:0:0:0:0:1 - - [13/Nov/2016:15:05:07 -0200] "GET /drogaria/faces/javax.faces.resource/layout/layout.css;jsessionid=76CEFA5A2502EFF5BA7943C402E383DF?ln=primefaces&v=4.0 HTTP/1.1" 200 542
+0:0:0:0:0:0:0:1 - - [13/Nov/2016:15:05:07 -0200] "GET /drogaria/faces/javax.faces.resource/estilos.css;jsessionid=76CEFA5A2502EFF5BA7943C402E383DF?ln=css HTTP/1.1" 200 229
+0:0:0:0:0:0:0:1 - - [13/Nov/2016:15:05:07 -0200] "GET /drogaria/faces/javax.faces.resource/jquery/jquery.js;jsessionid=76CEFA5A2502EFF5BA7943C402E383DF?ln=primefaces&v=4.0 HTTP/1.1" 200 105493
+0:0:0:0:0:0:0:1 - - [13/Nov/2016:15:05:07 -0200] "GET /drogaria/faces/javax.faces.resource/primefaces.css;jsessionid=76CEFA5A2502EFF5BA7943C402E383DF?ln=primefaces&v=4.0 HTTP/1.1" 200 53386
+0:0:0:0:0:0:0:1 - - [13/Nov/2016:15:05:07 -0200] "GET /drogaria/faces/javax.faces.resource/layout/layout.js;jsessionid=76CEFA5A2502EFF5BA7943C402E383DF?ln=primefaces&v=4.0 HTTP/1.1" 200 87653
+0:0:0:0:0:0:0:1 - - [13/Nov/2016:15:05:07 -0200] "GET /drogaria/faces/javax.faces.resource/primefaces.js;jsessionid=76CEFA5A2502EFF5BA7943C402E383DF?ln=primefaces&v=4.0 HTTP/1.1" 200 277201
+0:0:0:0:0:0:0:1 - - [13/Nov/2016:15:05:07 -0200] "GET /drogaria/faces/javax.faces.resource/jquery/jquery-plugins.js;jsessionid=76CEFA5A2502EFF5BA7943C402E383DF?ln=primefaces&v=4.0 HTTP/1.1" 200 220747
+0:0:0:0:0:0:0:1 - - [13/Nov/2016:15:16:42 -0200] "GET /drogaria/faces/pages/principal.xhtml HTTP/1.1" 200 4866
+0:0:0:0:0:0:0:1 - - [13/Nov/2016:15:16:42 -0200] "GET /drogaria/faces/javax.faces.resource/estilos.css?ln=css HTTP/1.1" 200 299

@@ -12,7 +12,3 @@
 body {
 	background-color: #FFFFFF;
 }
-
-.ui-widget, .ui-widget .ui-widget {
-font-size: 90% !important;
-}
