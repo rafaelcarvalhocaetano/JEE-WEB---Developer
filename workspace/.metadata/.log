@@ -832,3 +832,9 @@ Caused by: java.lang.NullPointerException
 
 !ENTRY org.eclipse.jface.text 2 0 2016-11-13 16:15:22.721
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2016-11-13 16:46:21.236
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2016-11-13 16:46:21.237
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
