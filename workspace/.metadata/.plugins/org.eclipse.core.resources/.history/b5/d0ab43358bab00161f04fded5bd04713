@@ -13,14 +13,9 @@
 	  </ui:define>
 	  
 	  <ui:define name="conteudo">
-	  	
-	  	<p:dataTable emptyMessage="Nenhum Registro encontrado">
-	  		<p:column headerText="código">
-	  		</p:column>
-	  		
-	  		<p:column headerText="Descrição">
-	  		
-	  		</p:column>
+	  	<p:dataTable>
+	  		<p:columns var="" headerText="código">
+	  		</p:columns>
 	  	
 	  	</p:dataTable>
 	  </ui:define>

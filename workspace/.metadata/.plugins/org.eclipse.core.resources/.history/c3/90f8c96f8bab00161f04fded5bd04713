@@ -14,7 +14,7 @@
 	  
 	  <ui:define name="conteudo">
 	  	
-	  	<p:dataTable emptyMessage="Nenhum Registro encontrado">
+	  	<p:dataTable emptyMessage="">
 	  		<p:column headerText="código">
 	  		</p:column>
 	  		
