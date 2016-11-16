@@ -10,6 +10,6 @@ import domain.Fabricante;
 @ViewScoped
 public class FabricanteBean {
 	
-	private ListDataModel<Fabricante> itens;
+	private ListDataModel<Fabricante>
 
 }
