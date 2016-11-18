@@ -13,8 +13,7 @@
 
 	<ui:define name="conteudo">
 
-		<p:dataTable emptyMessage="Nenhum Registro encontrado" 
-					 value="#{MBFabricante.itens}">
+		<p:dataTable emptyMessage="Nenhum Registro encontrado" value="">
 			<p:column headerText="Código">
 			
 			</p:column>
