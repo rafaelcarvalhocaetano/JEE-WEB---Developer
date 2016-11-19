@@ -120,7 +120,7 @@ public class FabricanteDAO {
 		sql.append("SELECT codigo, descricao ");
 		sql.append("FROM fabricante ");
 		sql.append("WHERE descricao LIKE ? ");
-		sql.append("ORDER BY descricao ASC ");
+		sql.append("ORDER BY descricao ");
 
 		Connection conexao = ConexaoFactory.conectar();
 
