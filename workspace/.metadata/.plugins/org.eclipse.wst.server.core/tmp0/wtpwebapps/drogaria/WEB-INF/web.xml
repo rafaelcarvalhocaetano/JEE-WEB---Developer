@@ -26,6 +26,6 @@
 	<!-- Definição do tema do primeFaces -->
 	<context-param>
 		<param-name>primefaces.THEME</param-name>
-		<param-value>start</param-value>
+		<param-value>Blitzer</param-value>
 	</context-param>
 </web-app>
