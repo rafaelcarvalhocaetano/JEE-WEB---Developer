@@ -11,7 +11,11 @@ public class ConexaoFactory {
 	private static final String URL = "jdbc:mysql://localhost:3306/drogaria";
 		
 	public static Connection conectar()throws SQLException{
+		try{
 		DriverManager.registerDriver(new com.mysql.jdbc.Driver());
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
 		Connection conexao = DriverManager.getConnection(URL, USUARIO, SENHA);
 		return conexao;
 	}
