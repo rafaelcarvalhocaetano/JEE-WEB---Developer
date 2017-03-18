@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>PRIME FACES</title>
+</h:head>
+<h:body>
+	<h:form>
+		<p:growl autoUpdate="true" />
+
+		<p:panelMenu style="width:300px">
+			<p:submenu label="Ajax Menuitems">
+				<p:menuitem value="Save" icon="ui-icon-disk" />
+				<p:menuitem value="Update" icon="ui-icon-arrowrefresh-1-w" />
+			</p:submenu>
+			<p:submenu label="Non-Ajax Menuitem">
+				<p:menuitem value="Delete" ajax="false" icon="ui-icon-close" />
+			</p:submenu>
+			<p:separator />   
+		</p:panelMenu>
+	</h:form>
+</h:body>
+</html>
