@@ -109,6 +109,35 @@ public class FabricanteDAO {
 
 	}
 
+	public ArrayList<Fabricante> buscarPorDescricao(Fabricante f) throws SQLException {
+
+		StringBuilder sql = new StringBuilder();
+		sql.append("SELECT codigo, descricao ");
+		sql.append("FROM fabricante ");
+		sql.append("WHERE descricao LIKE ? ");
+		sql.append("ORDER BY descricao ASC ");
+
+		Connection conexao = ConexaoFactory.conectar();
+		PreparedStatement comando = conexao.prepareStatement(sql.toString());
+
+		comando.setString(1, "%" + f.getDescricao() + "%");
+
+		ResultSet resultado = comando.executeQuery();
+
+		ArrayList<Fabricante> listar = new ArrayList<Fabricante>();
+
+		while (resultado.next()) {
+
+			Fabricante fab = new Fabricante();
+			fab.setCodigo(resultado.getLong("codigo"));
+			fab.setDescricao(resultado.getString("descricao"));
+
+			listar.add(fab);
+		}
+
+		return listar;
+	}
+
 	public static void main(String[] args) {
 
 		/*
@@ -161,8 +190,33 @@ public class FabricanteDAO {
 		 * }
 		 * 
 		 */
+		/*------------------BUSCAR --------------------------------------------
+		 * FabricanteDAO dao = new FabricanteDAO(); try { ArrayList<Fabricante>
+		 * lista = dao.listar();
+		 * 
+		 * for (Fabricante f : lista) {
+		 * 
+		 * System.out.println(f); } } catch (SQLException e) {
+		 * System.out.println("Ocorreu um erro ao listar"); e.printStackTrace();
+		 * }
+		 */
+		Fabricante f1 = new Fabricante();
+
+		f1.setDescricao("2");
+
 		FabricanteDAO dao = new FabricanteDAO();
-		ArrayList<Fabricante> listar = dao.listar();
+
+		try {
+			ArrayList<Fabricante> listar = dao.buscarPorDescricao(f1);
+
+			for (Fabricante f : listar) {
+				System.out.println("Resultado é: " + f);
+			}
+
+		} catch (SQLException e) {
+			System.out.println("ERRO ...");
+			e.printStackTrace();
+		}
 
 	}
 
