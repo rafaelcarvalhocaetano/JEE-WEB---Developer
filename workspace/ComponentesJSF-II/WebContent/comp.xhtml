@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Componentes JSF II</title>
+</h:head>
+<h:body>
+	<h:form>
+		<h:panelGrid columns="2">
+			<h:outputLabel value="Nome: " />
+			<h:inputText maxlength="50" size="30" />
+
+			<h:outputText value="Senha" />
+			<h:inputSecret maxlength="8" size="8" />
+
+			<h:outputLabel value="Observação: " />
+			<h:inputTextarea cols="30" rows="5" />
+
+			<h:outputText value="Opções: "/>
+			<h:selectManyCheckbox>
+				<f:selectItem itemValue="V" itemLabel="Viagem" />
+				<f:selectItem itemValue="C" itemLabel="Cinema"/>
+				<f:selectItem itemValue="P" itemLabel="Parque"/>
+			</h:selectManyCheckbox>
+			
+			<h:outputText value="Estado Civil: "/>
+			<h:selectOneRadio>
+			<f:selectItem itemValue="C" itemLabel="Casado"/>
+			<f:selectItem itemValue="S" itemLabel="Solteiro"/> 
+			<f:selectItem itemValue="D" itemLabel="Divorciado"/>
+			</h:selectOneRadio>
+			
+			<h:outputText value="Qual sua UF"/>
+			<h:selectOneMenu>
+			<f:selectItem itemValue="SP" itemLabel="São Paulo"/>
+			<f:selectItem itemValue="RJ" itemLabel="Rio de Janeiro"/>
+			<f:selectItem itemValue="BA" itemLabel="Bahia"/>
+			</h:selectOneMenu>
+
+		</h:panelGrid>
+		<h:panelGrid columns="4">
+			<h:commandButton value="TESTE I" />
+			<h:commandButton value="TESTE II" />
+			<h:commandButton value="TESTE III" />
+			<h:commandButton value="TESTE IV" />
+		</h:panelGrid>
+	</h:form>
+</h:body>
+</html>
