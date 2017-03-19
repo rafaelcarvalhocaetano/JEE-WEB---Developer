@@ -8,3 +8,6 @@
 .ui-layout-north .ui-layout-unit-content {
     overflow: visible !important;
 }﻿
+.ui-widget, .ui-widget .ui-widget {
+	font-size: 15px !important;
+}
