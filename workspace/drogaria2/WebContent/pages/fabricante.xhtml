@@ -9,18 +9,21 @@
 	<ui:define name="menu">
 		<ui:include src="/includes/menu.xhtml" />
 	</ui:define>
-	
-	<ui:define name="conteudo">
-	<p:dataTable emptyMessage="Nenhum registro encontrado"
-				value="#{MBFabricante.itens}"
-				var="item">
-		<p:column style="font-size:70%"  headerText="Codigo">
-			<h:outputText value="#{item.codigo}"/>
-		</p:column>
-		<p:column style="font-size:70%" headerText="Descrição">
-			<h:outputText value="#{item.descricao}"/>
-		</p:column>
-	</p:dataTable>
-	</ui:define>
 
+	<ui:define name="conteudo">
+		<h:form>
+			<p:dataTable style="font-size: 100%"
+				emptyMessage="Nenhum registro encontrado"
+				value="#{MBFabricante.itens}" var="item" paginator="true" rows="5">
+				<p:column style="font-size:70%" headerText="Codigo"
+					sortBy="#{item.codigo}" filterBy="#{item.codigo}">
+					<h:outputText value="#{item.codigo}" />
+				</p:column>
+				<p:column style="font-size:70%" headerText="Descrição"
+					sortBy="#{item.descricao}" filterBy="#{item.descricao}">
+					<h:outputText value="#{item.descricao}" />
+				</p:column>
+			</p:dataTable>
+		</h:form>
+	</ui:define>
 </ui:composition>
