@@ -11,10 +11,14 @@
 	</ui:define>
 	
 	<ui:define name="conteudo">
-	<p:dataTable emptyMessage="Nenhum registro encontrado">
+	<p:dataTable emptyMessage="Nenhum registro encontrado"
+				value="#{MBFabricante.itens}"
+				var="item">
 		<p:column style="font-size:70%"  headerText="Codigo">
+			<h:outputText value="#{item.codigo}"/>
 		</p:column>
 		<p:column style="font-size:70%" headerText="Descrição">
+			<h:outputText value="#{item.descricao}"/>
 		</p:column>
 	</p:dataTable>
 	</ui:define>
