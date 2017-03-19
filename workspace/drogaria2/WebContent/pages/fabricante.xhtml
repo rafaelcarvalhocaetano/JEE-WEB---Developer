@@ -9,5 +9,14 @@
 	<ui:define name="menu">
 		<ui:include src="/includes/menu.xhtml" />
 	</ui:define>
+	
+	<ui:define name="conteudo">
+	<p:dataTable emptyMessage="Nenhum registro encontrado">
+		<p:column style="font-size:70%"  headerText="Codigo">
+		</p:column>
+		<p:column style="font-size:70%" headerText="Descrição">
+		</p:column>
+	</p:dataTable>
+	</ui:define>
 
 </ui:composition>
