@@ -17,10 +17,11 @@ public class FabricanteBean {
 
 	private Fabricante fabricante;
 	private ListDataModel<Fabricante> itens;
-	
+
 	public Fabricante getFabricante() {
 		return fabricante;
 	}
+
 	public void setFabricante(Fabricante fabricante) {
 		this.fabricante = fabricante;
 	}
@@ -37,13 +38,31 @@ public class FabricanteBean {
 	public void prepararPesquisa() {
 
 		try {
-			
+
 			FabricanteDAO dao = new FabricanteDAO();
 			ArrayList<Fabricante> lista = dao.listar();
 			itens = new ListDataModel<Fabricante>(lista);
-			
+
 		} catch (SQLException e) {
 			System.out.println("Erro no precessamento");
+			e.printStackTrace();
+		}
+	}
+	public void prepararNovo(){
+		fabricante = new Fabricante();
+	}
+
+	public void novo() {
+		try {
+			FabricanteDAO dao = new FabricanteDAO();
+			dao.salvar(fabricante);
+			
+			ArrayList<Fabricante> lista = dao.listar();
+			
+			itens = new ListDataModel<Fabricante>(lista);
+			
+			
+		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 	}
