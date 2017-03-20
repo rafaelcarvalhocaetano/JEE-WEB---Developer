@@ -15,7 +15,15 @@ import br.com.drogaria.domain.Fabricante;
 @ViewScoped
 public class FabricanteBean {
 
+	private Fabricante fabricante;
 	private ListDataModel<Fabricante> itens;
+	
+	public Fabricante getFabricante() {
+		return fabricante;
+	}
+	public void setFabricante(Fabricante fabricante) {
+		this.fabricante = fabricante;
+	}
 
 	public ListDataModel<Fabricante> getItens() {
 		return itens;
