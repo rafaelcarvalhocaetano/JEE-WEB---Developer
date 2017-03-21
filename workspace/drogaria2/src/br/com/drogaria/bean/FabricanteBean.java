@@ -53,6 +53,25 @@ public class FabricanteBean {
 	public void prepararNovo() {
 		fabricante = new Fabricante();
 	}
+	
+	public void prepararExcluir(){
+		fabricante = itens.getRowData();
+	}
+	public void excluir(){
+		FabricanteDAO dao = new FabricanteDAO();
+		
+		try{
+			dao.excluir(fabricante);
+		
+			ArrayList<Fabricante> listar = dao.listar();
+			itens = new ListDataModel<Fabricante>(listar);
+			
+			JSFUtil.adicionarMensagemSucesso("Fabricante Removido com sucesso");
+		}catch(SQLException e){
+			e.printStackTrace();
+			JSFUtil.adicionarMensagemErro(e.getMessage());
+		}
+	}
 
 	public void novo() {
 		try {
