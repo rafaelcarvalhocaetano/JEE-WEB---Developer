@@ -10,6 +10,7 @@ import javax.faces.model.ListDataModel;
 
 import br.com.drogaria.dao.FabricanteDAO;
 import br.com.drogaria.domain.Fabricante;
+import br.com.drogaria.util.JSFUtil;
 
 @ManagedBean(name = "MBFabricante")
 @ViewScoped
@@ -44,11 +45,12 @@ public class FabricanteBean {
 			itens = new ListDataModel<Fabricante>(lista);
 
 		} catch (SQLException e) {
-			System.out.println("Erro no precessamento");
 			e.printStackTrace();
+			JSFUtil.adicionarMensagemErro(e.getMessage());
 		}
 	}
-	public void prepararNovo(){
+
+	public void prepararNovo() {
 		fabricante = new Fabricante();
 	}
 
@@ -56,14 +58,14 @@ public class FabricanteBean {
 		try {
 			FabricanteDAO dao = new FabricanteDAO();
 			dao.salvar(fabricante);
-			
 			ArrayList<Fabricante> lista = dao.listar();
-			
 			itens = new ListDataModel<Fabricante>(lista);
 			
-			
+			JSFUtil.adicionarMensagemErro("Fabricante Salvo com Sucesso");
+
 		} catch (SQLException e) {
 			e.printStackTrace();
+			JSFUtil.adicionarMensagemErro(e.getMessage());
 		}
 	}
 }

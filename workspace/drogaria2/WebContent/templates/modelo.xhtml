@@ -11,7 +11,9 @@
 	<h:outputStylesheet library="css" name="estilo.css"/>
 </h:head>
 <h:body>
-	<p:layout fullPage="true">
+	<p:growl id="msgGlobal" life="3000" />
+		
+		<p:layout fullPage="true">
 		<p:layoutUnit position="north">
 			<ui:insert name="menu" />
 		</p:layoutUnit>
