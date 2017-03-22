@@ -14,7 +14,9 @@
 		<h:form id="frmFabricantes">
 			<p:dataTable id="tblFabricantes" style="font-size: 100%"
 				emptyMessage="Nenhum registro encontrado"
-				value="#{MBFabricante.itens}" var="item" paginator="true" rows="5">
+				value="#{MBFabricante.itens}" var="item"
+				filteredValue="#{MBFabricante.itensFiltrados}"
+				paginator="true" rows="5">
 				<f:facet name="header">
 					Fabricante - Listagem
 				</f:facet>
@@ -29,12 +31,22 @@
 				
 				<p:column headerText="Opções">	
 				
-					<p:commandButton icon="ui-icon-trash" actionListener="#{MBFabricante.prepararExcluir}"
-					oncomplete="PF('dlgFabExcluir').show();" update=":frmFabExcluir:pnlFabExcluir"/>	
+					<p:commandButton icon="ui-icon-trash" 
+					oncomplete="PF('dlgFabExcluir').show();"
+					update=":frmFabExcluir:pnlFabExcluir">
 					
-					<p:commandButton icon="ui-icon-pencil" actionListener="#{MBFabricante.prepararEditar}"
+						<f:setPropertyActionListener target="#{MBFabricante.fabricante}" value="#{item}" />
+					
+					</p:commandButton>	
+					
+					<p:commandButton icon="ui-icon-pencil"
 					oncomplete="PF('dlgFabEditar').show();"
-					update=":frmFabEditar:pnlFabEditar"/>
+					update=":frmFabEditar:pnlFabEditar">
+						
+						<f:setPropertyActionListener value="#{item}" target="#{MBFabricante.fabricante}" />
+						
+					</p:commandButton>
+					
 								
 				</p:column>
 				
