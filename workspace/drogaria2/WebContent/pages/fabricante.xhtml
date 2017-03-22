@@ -13,6 +13,7 @@
 	<ui:define name="conteudo">
 		<h:form id="frmFabricantes">
 			<p:dataTable id="tblFabricantes" style="font-size: 100%"
+				widgetVar="tabelaFabricantes"
 				emptyMessage="Nenhum registro encontrado"
 				value="#{MBFabricante.itens}" var="item"
 				filteredValue="#{MBFabricante.itensFiltrados}"
@@ -73,7 +74,7 @@
 				<h:panelGrid columns="2">
 					<p:commandButton value="Gravar"
 									 actionListener="#{MBFabricante.novo}"
-									 oncomplete="PF{'dlgFabNovo'}.hide();"
+									 oncomplete="PF{'dlgFabNovo'}.hide(); tabelaFabricantes.clearFilters();"
 									 update=":frmFabricantes:tblFabricantes :msgGlobal"/>
 					<p:commandButton value="Cancelar" onclick="PF('dlgFabNovo').hide();"/>
 				</h:panelGrid>
@@ -101,7 +102,7 @@
 				<h:panelGrid columns="2">
 				<p:commandButton value="Excluir"
 								 actionListener="#{MBFabricante.excluir}"
-								 oncomplete="PF('dlgFabExcluir').hide();"
+								 oncomplete="PF('dlgFabExcluir').hide(); tabelaFabricantes.clearFilters();"
 								 update=":frmFabricantes:tblFabricantes :msgGlobal"
 								/>
 				
@@ -129,7 +130,7 @@
 				
 				<h:panelGrid columns="2">
 					<p:commandButton value="Editar" actionListener="#{MBFabricante.editar}"
-					oncomplete="PF('dlgFabEditar').hide();"	
+					oncomplete="PF('dlgFabEditar').hide(); tabelaFabricantes.clearFilters();"	
 					update=":frmFabricantes:tblFabricantes :msgGlobal"/>
 					
 					<p:commandButton value="Cancelar" onclick="PF('dlgFabEditar').hide();"/>
