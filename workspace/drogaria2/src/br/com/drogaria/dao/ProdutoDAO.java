@@ -14,8 +14,8 @@ public class ProdutoDAO {
 		StringBuilder sql = new StringBuilder();
 		
 		sql.append("INSERT INTO produto ");
-		sql.append("(descricao, preco, quantidade, fabricante_codigo)");
-		sql.append("VALUE (? ? ? ?) ");
+		sql.append("(descricao, quantidade, preco, fabricante_codigo) ");
+		sql.append("VALUES (?, ?, ?, ?) ");
 		
 		Connection conexao = ConexaoFactory.conectar();
 		
@@ -25,7 +25,6 @@ public class ProdutoDAO {
 		ppt.setDouble(2, p.getPreco());
 		ppt.setLong(3, p.getQuantidade());
 		ppt.setLong(4, p.getFabricante().getCodigo());
-		
 		
 		ppt.executeUpdate();
 	}
