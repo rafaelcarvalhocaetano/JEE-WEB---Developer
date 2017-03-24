@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<ui:composition	xmlns="http://www.w3.org/1999/xhtml"
+<ui:composition
+	xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:p="http://primefaces.org/ui"
@@ -11,43 +12,46 @@
 		<ui:include src="/includes/menu.xhtml"/>
 	</ui:define>
 	
-	<ui:define name="conteudo">	
+	<ui:define name="conteudo">
+	
+	<f:event listener="#{MBProduto.carregarListagem}" type="preRenderView"/>	
+		
 		<h:form id="FrmProdListagem">
 			<p:dataTable id="tblProdListagem"
+						 emptyMessage="Nenhum Item selecionado."
+						 paginator="true" rows="5"
 						 value="#{MBProduto.itens}"
-						 var="#{itens}"
-						 emptyMessage="Nenhum registro encontrado"
-						 paginator="true" rows="4">
+						 var="item">
 						 
 			<f:facet name="header">
 				<h:outputText value="Produto - Listagem"/>
 			</f:facet>
 			
-			<p:column headerText="" >
-				<h:outputText value="#{item.codigo}"/>
-			
-			</p:column>
-			<p:column headerText="">
-				<h:outputText value="#{item.descricao}"/>
-			
-			</p:column>
-			<p:column headerText="">
-				<h:outputText value="#{item.preco}"/>
-			
-			</p:column>
-			<p:column headerText="">
-				<h:outputText value="#{item.quantidade}"/>
-			
-			</p:column>
-			<p:column headerText="">
-			
-			
+			<p:column headerText="Código" >
+				<h:outputText value="#{item.codigo}"/>			
 			</p:column>
 			
+			<p:column headerText="Descrição">
+				<h:outputText value="#{item.descricao}"/>			
+			</p:column>
+			
+			<p:column headerText="Preço">
+				<h:outputText value="#{item.preco}"/>			
+			</p:column>
+			
+			<p:column headerText="Quantidade">
+				<h:outputText value="#{item.quantidade}"/>			
+			</p:column>
+			
+			<p:column headerText="Fabricante">
+				<h:outputText value="#{item.fabricante.descricao}"/>			
+			</p:column>
+						
 			</p:dataTable>		
 		</h:form>
+		
 	</ui:define>
 	
-
+-->
 
 </ui:composition>

@@ -100,7 +100,7 @@ public class FabricanteBean {
 			
 			itens = dao.listar();
 			
-			JSFUtil.adicionarMensagemErro("Fabricante Salvo com Sucesso");
+			JSFUtil.adicionarMensagemSucesso("Fabricante Salvo com Sucesso");
 
 		} catch (SQLException e) {
 			e.printStackTrace();

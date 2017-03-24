@@ -3,6 +3,7 @@ package br.com.drogaria.bean;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
@@ -14,24 +15,29 @@ import br.com.drogaria.util.JSFUtil;
 @ViewScoped
 public class ProdutoBean {
 
-	ArrayList<Produto> itens;
+	private ArrayList<Produto> itens;
+	
+	
 	
 	public ArrayList<Produto> getItens() {
 		return itens;
 	}
-	
+
+
+
 	public void setItens(ArrayList<Produto> itens) {
 		this.itens = itens;
 	}
-	
-	
+
+
+
 	public void carregarListagem(){
 		
-		ProdutoDAO dao = new ProdutoDAO();
-		
 		try {
+			
+			ProdutoDAO dao = new ProdutoDAO();
 			itens = dao.lista();
-			JSFUtil.adicionarMensagemSucesso("Carregado com sucesso");
+						
 		} catch (SQLException e) {
 			e.printStackTrace();
 			JSFUtil.adicionarMensagemErro(e.getMessage());
