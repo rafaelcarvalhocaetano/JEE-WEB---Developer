@@ -21,34 +21,42 @@
 						 emptyMessage="Nenhum Item selecionado."
 						 paginator="true" rows="5"
 						 value="#{MBProduto.itens}"
-						 var="item">
+						 var="item"
+						 filteredValue="#{MBProduto.itensFiltrados}">
 						 
 			<f:facet name="header">
 				<h:outputText value="Produto - Listagem"/>
 			</f:facet>
 			
-			<p:column headerText="Código" >
+			<p:column headerText="Código" filterBy="#{item.codigo}" sortBy="#{item.codigo}">
 				<h:outputText value="#{item.codigo}"/>			
 			</p:column>
 			
-			<p:column headerText="Descrição">
+			<p:column headerText="Descrição" filterBy="#{item.descricao}" sortBy="#{item.descricao}">
 				<h:outputText value="#{item.descricao}"/>			
 			</p:column>
 			
-			<p:column headerText="Preço">
+			<p:column headerText="Preço" filterBy="#{item.preco}" sortBy="#{item.preco}">
 				<h:outputText value="#{item.preco}"/>			
 			</p:column>
 			
-			<p:column headerText="Quantidade">
+			<p:column headerText="Quantidade" filterBy="#{item.quantidade}" sortBy="#{item.quantidade}">
 				<h:outputText value="#{item.quantidade}"/>			
 			</p:column>
 			
-			<p:column headerText="Fabricante">
+			<p:column headerText="Fabricante" filterBy="#{item.fabricante.descricao}" sortBy="#{item.fabricante.descricao}">
 				<h:outputText value="#{item.fabricante.descricao}"/>			
 			</p:column>
 						
 			</p:dataTable>		
 		</h:form>
+		
+		<p:dialog widgetVar="dlgProdNovo" closable="false" draggable="false" resizable="false" header="Produto - Novo">
+			<h:form>
+			
+			
+			</h:form>
+		</p:dialog>
 		
 	</ui:define>
 	
