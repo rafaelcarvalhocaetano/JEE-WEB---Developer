@@ -11,7 +11,41 @@
 		<ui:include src="/includes/menu.xhtml"/>
 	</ui:define>
 	
-	<ui:define name="conteudo">
+	<ui:define name="conteudo">	
+		<h:form id="FrmProdListagem">
+			<p:dataTable id="tblProdListagem"
+						 value="#{MBProduto.itens}"
+						 var="#{itens}"
+						 emptyMessage="Nenhum registro encontrado"
+						 paginator="true" rows="4">
+						 
+			<f:facet name="header">
+				<h:outputText value="Produto - Listagem"/>
+			</f:facet>
+			
+			<p:column headerText="" >
+				<h:outputText value="#{item.codigo}"/>
+			
+			</p:column>
+			<p:column headerText="">
+				<h:outputText value="#{item.descricao}"/>
+			
+			</p:column>
+			<p:column headerText="">
+				<h:outputText value="#{item.preco}"/>
+			
+			</p:column>
+			<p:column headerText="">
+				<h:outputText value="#{item.quantidade}"/>
+			
+			</p:column>
+			<p:column headerText="">
+			
+			
+			</p:column>
+			
+			</p:dataTable>		
+		</h:form>
 	</ui:define>
 	
 
