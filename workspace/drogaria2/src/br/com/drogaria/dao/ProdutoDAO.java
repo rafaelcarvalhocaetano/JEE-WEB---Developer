@@ -83,4 +83,23 @@ public class ProdutoDAO {
 		ppt.executeUpdate();
 
 	}
+	public void editar(Produto p)throws SQLException{
+		StringBuilder sql = new StringBuilder();
+		
+		sql.append("UPDATE produto ");
+		sql.append("SET descricao = ?, preco = ?, quantidade = ?, fabricante_codigo = ? ");
+		sql.append("WHERE codigo = ? ");
+		
+		Connection conexao = ConexaoFactory.conectar();
+		
+		PreparedStatement ppt = conexao.prepareStatement(sql.toString());
+		
+		ppt.setString(1, p.getDescricao());
+		ppt.setDouble(2, p.getPreco());
+		ppt.setLong(3, p.getQuantidade());
+		ppt.setLong(4, p.getFabricante().getCodigo());
+		ppt.setLong(5, p.getCodigo());
+		
+		ppt.executeUpdate();
+	}
 }
