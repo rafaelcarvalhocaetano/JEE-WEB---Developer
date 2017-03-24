@@ -1,14 +1,18 @@
 package br.com.drogaria.Test;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
 import org.junit.Ignore;
 import org.junit.Test;
 
+
 import br.com.drogaria.dao.ProdutoDAO;
 import br.com.drogaria.domain.Fabricante;
 import br.com.drogaria.domain.Produto;
+import br.com.drogaria.factory.ConexaoFactory;
 
 
 public class ProdutoDAOTeste {
@@ -51,5 +55,6 @@ public class ProdutoDAOTeste {
 			
 		}
 	}
+	
 
 }
