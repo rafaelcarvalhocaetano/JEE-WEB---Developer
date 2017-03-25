@@ -94,16 +94,41 @@ public class ProdutoBean {
 			JSFUtil.adicionarMensagemErro(e.getMessage());
 		}
 	}
-	public void excluir(){
-		
-		try{
+
+	public void excluir() {
+
+		try {
 			ProdutoDAO dao = new ProdutoDAO();
 			dao.excluir(produto);
 			JSFUtil.adicionarMensagemSucesso("Produto excluido com sucesso");
-		}catch(SQLException e){
+		} catch (SQLException e) {
 			e.printStackTrace();
 			JSFUtil.adicionarMensagemErro(e.getMessage());
 		}
-		
+	}
+	
+	public void prepararEditar(){
+		try {
+			FabricanteDAO dao = new FabricanteDAO();
+			comboFabricante = dao.listar();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+			JSFUtil.adicionarMensagemErro(e.getMessage());
+		}
+	}
+	public void editar(){
+		try {
+			ProdutoDAO dao = new ProdutoDAO();
+			dao.editar(produto);
+			
+			itens = dao.lista();
+			
+			JSFUtil.adicionarMensagemSucesso("Produto editado com sucesso");
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+			JSFUtil.adicionarMensagemErro(e.getMessage());
+		}
 	}
 }
