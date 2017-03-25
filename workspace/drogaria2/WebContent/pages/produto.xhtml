@@ -49,7 +49,8 @@
 			</p:column>
 						
 			<f:facet name="footer">
-				<p:commandButton value="Novo" oncomplete="PF('dlgProdNovo').show();"/>
+				<p:commandButton value="Novo" oncomplete="PF('dlgProdNovo').show();" actionListener="#{MBProduto.prepararNovo}"
+								 update=":frmProdNovo:pnlProdNovo :msgGlobal"/>
 			</f:facet>
 			</p:dataTable>		
 		</h:form>
@@ -66,6 +67,14 @@
 					<p:outputLabel value="Quantidade "/>
 					<p:inputText value="#{MBProduto.produto.quantidade}" size="10"/>
 					
+					<p:outputLabel value="Fabricante"/>
+					<p:selectOneMenu value="#{MBProduto.produto.fabricante.codigo}">
+						<f:selectItem itemValue="" itemLabel="Selecione um Fabricante" />
+						<f:selectItems value="#{MBProduto.comboFabricante}" var="item" itemValue="#{item.codigo}" itemLabel="#{item.descricao}"/>
+						
+						
+					</p:selectOneMenu>
+					
 					<h:panelGrid columns="2">
 						<p:commandButton value="Gravar"/>
 						<p:commandButton value="Cancelar" oncomplete="PF('dlgProdNovo').hide();"/>
@@ -77,7 +86,4 @@
 		</p:dialog>
 		
 	</ui:define>
-	
--->
-
 </ui:composition>
