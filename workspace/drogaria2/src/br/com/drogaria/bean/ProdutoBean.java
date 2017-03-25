@@ -72,11 +72,38 @@ public class ProdutoBean {
 			produto = new Produto();
 			FabricanteDAO dao = new FabricanteDAO();
 			comboFabricante = dao.listar();
-			
+
 		} catch (SQLException e) {
 			e.printStackTrace();
 			JSFUtil.adicionarMensagemErro(e.getMessage());
 
 		}
+	}
+
+	public void novo() {
+
+		try {
+			ProdutoDAO dao = new ProdutoDAO();
+			dao.salvar(produto);
+
+			itens = dao.lista();
+
+			JSFUtil.adicionarMensagemSucesso("Produto salvo com sucesso");
+		} catch (SQLException e) {
+			e.printStackTrace();
+			JSFUtil.adicionarMensagemErro(e.getMessage());
+		}
+	}
+	public void excluir(){
+		
+		try{
+			ProdutoDAO dao = new ProdutoDAO();
+			dao.excluir(produto);
+			JSFUtil.adicionarMensagemSucesso("Produto excluido com sucesso");
+		}catch(SQLException e){
+			e.printStackTrace();
+			JSFUtil.adicionarMensagemErro(e.getMessage());
+		}
+		
 	}
 }
