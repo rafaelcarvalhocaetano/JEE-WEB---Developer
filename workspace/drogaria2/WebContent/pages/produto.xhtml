@@ -87,7 +87,7 @@
 						<p:commandButton value="Gravar" actionListener="#{MBProduto.novo}" update=":msgGlobal :FrmProdListagem:tblProdListagem" 
 						oncomplete="verificar(xhr,status, args, 'dlgProdNovo','tabelaProdListagem' );" />
 						
-						<p:commandButton value="Cancelar" oncomplete="PF('dlgProdNovo').hide();"/>
+						<p:commandButton value="Cancelar" process="@this" oncomplete="PF('dlgProdNovo').hide();"/>
 					</h:panelGrid>
 					
 					
@@ -118,7 +118,7 @@
 									 update=":FrmProdListagem:tblProdListagem :msgGlobal" 
 									 oncomplete="PF('dlgProdExcluir').hide(); tabelaProdListagem.clearFilters();"/>
 					
-					<p:commandButton value="Cancelar" oncomplete="PF('dlgProdExcluir').hide();"/>
+					<p:commandButton value="Cancelar" process="@this" oncomplete="PF('dlgProdExcluir').hide();"/>
 				</h:panelGrid>
 			</h:form>
 		</p:dialog>
@@ -151,7 +151,7 @@
 					<p:commandButton value="Editar" actionListener="#{MBProduto.editar}" update=":msgGlobal :FrmProdListagem:tblProdListagem"
 									 oncomplete="verificar(xhr, status, args, 'dlgProdEditar','tabelaProdListagem');"/>
 					
-					<p:commandButton value="Cancelar" oncomplete="PF('dlgProdEditar').hide();"/>
+					<p:commandButton value="Cancelar" process="@this" oncomplete="PF('dlgProdEditar').hide();"/>
 				</h:panelGrid>
 			</h:form>
 		</p:dialog>
