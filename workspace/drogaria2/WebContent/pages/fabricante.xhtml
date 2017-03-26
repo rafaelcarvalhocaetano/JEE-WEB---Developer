@@ -34,8 +34,7 @@
 					</p:commandButton>
 
 					<p:commandButton icon="ui-icon-pencil" oncomplete="PF('dlgFabEditar').show();" update=":frmFabEditar:pnlFabEditar">
-						<f:setPropertyActionListener value="#{item}"
-							target="#{MBFabricante.fabricante}" />
+						<f:setPropertyActionListener value="#{item}" target="#{MBFabricante.fabricante}" />
 					</p:commandButton>
 
 				</p:column>
@@ -58,7 +57,9 @@
 				<h:panelGrid columns="2">
 					<p:commandButton value="Gravar" actionListener="#{MBFabricante.novo}" oncomplete="verificar(xhr, status, args, 'dlgFabNovo', 'tabelaFabricantes');" 
 									 update=":frmFabricantes:tblFabricantes :msgGlobal" />
-					<p:commandButton value="Cancelar" process="@this" onclick="PF('dlgFabNovo').hide();" />
+					<p:commandButton value="Cancelar" process="@this" onclick="PF('dlgFabNovo').hide();">
+						<p:resetInput target="pg" />
+					</p:commandButton>
 				</h:panelGrid>
 
 			</h:form>
@@ -102,7 +103,9 @@
 					 oncomplete="verificar(xhr, status, args, 'dlgFabEditar', 'tabelaFabricantes');"
 									 update=":frmFabricantes:tblFabricantes :msgGlobal" />
 
-					<p:commandButton value="Cancelar" process="@this" onclick="PF('dlgFabEditar').hide();" />
+					<p:commandButton value="Cancelar" process="@this" onclick="PF('dlgFabEditar').hide();">
+						<p:resetInput target="pnlFabEditar" />
+					</p:commandButton>
 				</h:panelGrid>
 			</h:form>
 		</p:dialog>
