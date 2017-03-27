@@ -32,11 +32,13 @@
 				<h:outputText value="#{item.descricao}"/>			
 			</p:column>
 			
-			<p:column headerText="Preço" filterBy="#{item.preco}" sortBy="#{item.preco}">
-				<h:outputText value="#{item.preco}"/>			
+			<p:column headerText="Preço" sortBy="#{item.preco}">
+				<h:outputText value="#{item.preco}">
+					<f:convertNumber pattern="0.00"/>
+				</h:outputText>			
 			</p:column>
 			
-			<p:column headerText="Quantidade" filterBy="#{item.quantidade}" sortBy="#{item.quantidade}">
+			<p:column headerText="Quantidade" sortBy="#{item.quantidade}">
 				<h:outputText value="#{item.quantidade}"/>			
 			</p:column>
 			
@@ -70,7 +72,10 @@
 					<p:inputText id="txtDescProdNovo" value="#{MBProduto.produto.descricao}" required="true" maxlength="50" size="30" rendered="true" requiredMessage="Campo obrigatório"/>
 					
 					<p:outputLabel for="txtDescProdPreco" value="Preço: "/>
-					<p:inputText id="txtDescProdPreco" value="#{MBProduto.produto.preco}" size="10" required="true" requiredMessage="Campo Obrigatório"/>
+					<p:inputText id="txtDescProdPreco" value="#{MBProduto.produto.preco}" size="10" required="true" requiredMessage="Campo Obrigatório"
+								 converterMessage="Informe um valor valido">
+						<f:convertNumber />
+					</p:inputText>
 					
 					<p:outputLabel for="txtDescProdQuantidade" value="Quantidade "/>
 					<p:inputText id="txtDescProdQuantidade" value="#{MBProduto.produto.quantidade}" size="10" required="true" requiredMessage="Campo Obrigatório"/>
