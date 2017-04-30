@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	<%@ page import="br.com.uninove.bean.*"%> 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -31,16 +32,18 @@
   		<h3>Resposta da calculadora de Bhaskara <span class="label label-default"><%=request.getParameter("a")%>x + <%=request.getParameter("b")%>x + <%=request.getParameter("c")%></span></h3>
   		
   		<ul class="list-group">
-		  <li class="list-group-item">Delta<span class="badge"><%= bhaskara.getDelta() %></span></li>
+		  <li class="list-group-item">Delta<span class="badge"></span></li>
 		</ul>
 		
 		<ul class="list-group">
-		  <li class="list-group-item">Raiz Positiva<span class="badge"><%= bhaskara.getRaizPositiva() %></span></li>
+		  <li class="list-group-item">Raiz Positiva<span class="badge"></span></li>
 		</ul>
 		
 		<ul class="list-group">
-		  <li class="list-group-item">Raiz Negativa<span class="badge"><%= bhaskara.getRaizNegativa() %></span></li>
+		  <li class="list-group-item">Raiz Negativa<span class="badge"></span></li>
 		</ul>
+		
+		
 		
 	</div>
 	

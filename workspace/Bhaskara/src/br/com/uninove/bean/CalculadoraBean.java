@@ -1,5 +1,8 @@
 package br.com.uninove.bean;
 
+import javax.annotation.ManagedBean;
+
+@ManagedBean
 public class CalculadoraBean {
 
 	private String a;
@@ -46,7 +49,6 @@ public class CalculadoraBean {
 			e.printStackTrace();
 			return 0;
 		}
-
 	}
 	
 	public String getRaizPositiva(){

@@ -40,7 +40,7 @@
 	  		<input type="text" name="c" id="valorC" class="form-control" placeholder="Informe o valor de 'C' " >
 		</div>
 		
-		<button class="btn btn-primary">Calcular</button>
+		<button class="btn btn-primary" type="submit" value="Calcular">Calcular</button>
 	
 	</form>
 
