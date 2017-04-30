@@ -5,15 +5,24 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
-<link rel="stylesheet" type="text/css" href="./resources/css/bootstrap.min.css" />
- <link rel="stylesheet" type="text/css" href="./resources/css/bootstrap-theme.min.css" />
- <script src="./resources/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="./resources/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="./resources/css/bootstrap-theme.min.css" />
+	<!-- Meu estilo -->
+	<link rel="stylesheet" type="text/css" href="./resources/css/myStyle.css" />
+	<script src="./resources/js/bootstrap.min.js"></script>
  
-
-
-<title>Calculadora de Bascara</title>
+	<title>Calculadora de Bascara</title>
 </head>
 <body>
+
+	<form method="post" action="bhaskara.jsp">
+	
+	<div class="page-header" >
+ 		<h3 id="a">Calculadora de Bhaskara</h3>
+	</div>
+	
+	
+	</form>
 
 
 
