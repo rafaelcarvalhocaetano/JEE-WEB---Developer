@@ -30,7 +30,7 @@ public class CalculadoraBean {
 		this.c = c;
 	}
 
-	public double delta() {
+	public double getDelta() {
 
 		try {
 			double da, db, dc;
@@ -49,7 +49,7 @@ public class CalculadoraBean {
 
 	}
 	
-	public String raizPositiva(){
+	public String getRaizPositiva(){
 		try {
 			double da, db, dc;
 
@@ -57,11 +57,11 @@ public class CalculadoraBean {
 			db = Double.parseDouble(b);
 			dc = Double.parseDouble(c);
 
-			if(delta() < 0 ){
+			if(getDelta() < 0 ){
 				return "Delta é negativo";
 			}else{
 				double raizPositiva;
-				raizPositiva = ( -db + Math.sqrt(delta()) ) / (2 * da);
+				raizPositiva = ( -db + Math.sqrt(getDelta()) ) / (2 * da);
 				return String.valueOf(raizPositiva);
 			}
 
@@ -71,7 +71,7 @@ public class CalculadoraBean {
 		}
 
 	}
-	public String raizNegativa(){
+	public String getRaizNegativa(){
 		try {
 			double da, db, dc;
 
@@ -79,11 +79,11 @@ public class CalculadoraBean {
 			db = Double.parseDouble(b);
 			dc = Double.parseDouble(c);
 			
-			if(delta() < 0 ){
+			if(getDelta() < 0 ){
 				return "Delta é negativo";
 			}else{
 				double raizPositiva;
-				raizPositiva = ( -db - Math.sqrt(delta()) ) / (2 * da);
+				raizPositiva = ( -db - Math.sqrt(getDelta()) ) / (2 * da);
 				return String.valueOf(raizPositiva);
 			}
 		} catch (Exception e) {
