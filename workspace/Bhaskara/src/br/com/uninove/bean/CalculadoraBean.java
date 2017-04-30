@@ -71,5 +71,24 @@ public class CalculadoraBean {
 		}
 
 	}
+	public String raizNegativa(){
+		try {
+			double da, db, dc;
+
+			da = Double.parseDouble(a);
+			db = Double.parseDouble(b);
+			dc = Double.parseDouble(c);
+			
+			if(delta() < 0 ){
+				return "Delta é negativo";
+			}else{
+				double raizPositiva;
+				raizPositiva = ( -db - Math.sqrt(delta()) ) / (2 * da);
+				return String.valueOf(raizPositiva);
+			}
+		} catch (Exception e) {
+			return "Erro";
+		}
+	}
 
 }
