@@ -1,10 +1,10 @@
 package br.com.uninove.bean;
 
-import com.sun.org.apache.regexp.internal.recompile;
-
 public class CalculadoraBean {
 
-	private String a, b, c;
+	private String a;
+	private String b;
+	private String c;
 
 	public String getA() {
 		return a;

@@ -9,8 +9,21 @@
 <body>
 	<jsp:useBean id="bhaskara" scope="page" class="br.com.uninove.bean.CalculadoraBean"/>
 	
-	<jsp:setProperty property="a" name="bhaskara" value="<%= request.getParameter("a") %>"/>
-	<jsp:setProperty property="b" name="bhaskara" value="<%= request.getParameter("b") %>"/>
-	<jsp:setProperty property="c" name="bhaskara" value="<%= request.getParameter("c") %>"/>
+	<jsp:setProperty name="bhaskara" property="a" value='<%=request.getParameter("a")%>'/>
+	<jsp:setProperty property="b" name="bhaskara" value='<%= request.getParameter("b") %>'/>
+	<jsp:setProperty property="c" name="bhaskara" value='<%= request.getParameter("c") %>'/>
+	
+	<h1>Dados</h1>
+	
+	<h2><%= request.getParameter("a")%> + <%= request.getParameter("b") %> + <%= request.getParameter("c") %></h2>
+	
+	
+	
+
+	
+	
+	
+
+	
 </body>
 </html>

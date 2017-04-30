@@ -12,4 +12,12 @@
 		<welcome-file>default.htm</welcome-file>
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
+	<!-- 
+	<servlet>
+		<init-param>
+    <param-name>strictQuoteEscaping</param-name>
+    <param-value>false</param-value>
+</init-param>
+	</servlet>
+	 -->
 </web-app>
