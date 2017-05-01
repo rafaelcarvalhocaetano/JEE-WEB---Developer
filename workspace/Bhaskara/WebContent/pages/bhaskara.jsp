@@ -16,8 +16,6 @@
 
 	<!-- Mobile -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<title>Respostas</title>
 </head>
@@ -25,25 +23,24 @@
 	<jsp:useBean id="bhaskara" scope="page" class="br.com.uninove.bean.CalculadoraBean" />
 
 	<jsp:setProperty property="a" name="bhaskara" value='<%=request.getParameter("a")%>' />
+	
 	<jsp:setProperty property="b" name="bhaskara" value='<%=request.getParameter("b")%>' />
 	<jsp:setProperty property="c" name="bhaskara" value='<%=request.getParameter("c")%>' />
 
 	<div class="jumbotron">
   		<h3>Resposta da calculadora de Bhaskara <span class="label label-default"><%=request.getParameter("a")%>x + <%=request.getParameter("b")%>x + <%=request.getParameter("c")%></span></h3>
-  		
+		
   		<ul class="list-group">
-		  <li class="list-group-item">Delta<span class="badge"></span></li>
+		  <li class="list-group-item">Delta<span class="badge">  Delta: <% out.print(bhaskara.getDelta()); %> <br/></span></li>
 		</ul>
 		
 		<ul class="list-group">
-		  <li class="list-group-item">Raiz Positiva<span class="badge"></span></li>
+		  <li class="list-group-item">Raiz Positiva<span class="badge"><% out.print(bhaskara.getRaizPositiva()); %></span></li>
 		</ul>
 		
 		<ul class="list-group">
-		  <li class="list-group-item">Raiz Negativa<span class="badge"></span></li>
+		  <li class="list-group-item">Raiz Negativa<span class="badge"><% out.print(bhaskara.getRaizNegativa()); %></span></li>
 		</ul>
-		
-		
 		
 	</div>
 	
