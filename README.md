@@ -1,8 +1,8 @@
-## java Web - Instalando as dependências necessárias para rodar os projetos deste workspace.
+### java Web - Instalando as dependências necessárias para rodar os projetos deste workspace.
 
-## Projeto Front-End com java - Aplicações com foco em banco de dados sem uso do Hibernate.
+### Projeto Front-End com java - Aplicações com foco em banco de dados sem uso do Hibernate.
 
-## Instalando o java 8
+### Instalando o java 8
 
 
 Acesse o link http://www.oracle.com/technetwork/pt/java/javase/downloads/index.html
