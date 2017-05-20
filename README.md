@@ -1,4 +1,4 @@
-### java Web - Instalando as dependências necessárias para rodar os projetos deste workspace.
+### Java Web - Instalando as dependências necessárias para rodar os projetos deste workspace.
 
 ### Projeto Front-End com java - Aplicações com foco em banco de dados sem uso do Hibernate.
 
